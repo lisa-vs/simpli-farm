@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "simplifarm-1f185": {
+      "hosting": {
+        "simplifarm": [
+          "simplifarm-1f185"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "simplifarm-1f185"
+  }
+}

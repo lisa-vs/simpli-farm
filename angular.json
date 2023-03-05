@@ -97,6 +97,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "simplifarm:build:production",
+            "firebaseProject": "simplifarm-1f185",
+            "firebaseHostingSite": "simplifarm-1f185"
+          }
         }
       }
     }
