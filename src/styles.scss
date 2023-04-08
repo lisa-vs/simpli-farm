@@ -1,1 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
+$english-holly: #032314;
+$english-holly-dark-50: #02120a;
+$polar: #f1fcf5;
+$rum-swizzle: #fbfcf1;
+$pewter: #9cb0a4;
+$jade: #00aa5f;
+$milano-red: #aa1b00;
+$chelsea-gem: #aa5f00;
+$lunar-green: #404944;
+$black-rock: #040323;
+
+
+$primary: $english-holly;
+$secondary: $pewter;
+$success: $jade;
+$warning: $chelsea-gem;
+$danger: $milano-red;
+$info:$black-rock;
+$light: $rum-swizzle;
+$dark: $english-holly-dark-50;
+
+// Customize the light and dark text colors for use in our color contrast function.
+$color-contrast-dark:      $dark;
+$color-contrast-light:     $light;
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg:                   $light;
+$body-color:                $dark;
+
+$component-active-color:      $light;
+$mark-bg:                     $warning;
+
+$navbar-light-color:                rgba($dark, .55) ;
+$navbar-light-hover-color:          rgba($dark, .7) ;
+$navbar-light-active-color:         rgba($dark, .9) ;
+$navbar-light-disabled-color:       rgba($dark, .3) ;
+$navbar-light-toggler-border-color: rgba($dark, .1) ;
+// scss-docs-end navbar-variables
+
+// scss-docs-start navbar-dark-variables
+$navbar-dark-color:                 rgba($light, .55) ;
+$navbar-dark-hover-color:           rgba($light, .75) ;
+$navbar-dark-active-color:          $light ;
+$navbar-dark-disabled-color:        rgba($light, .25) ;
+$navbar-dark-toggler-border-color:  rgba($light, .1) ;
+
+
+
+$gray-100: #d9dbda ;
+$gray-200: #b3b6b4 ;
+$gray-300: #8c928f ;
+$gray-400: #666d69 ;
+$gray-500: $lunar-green;
+$gray-600: #333a36;
+$gray-700: #262c29;
+$gray-800: #1a1d1b;
+$gray-900: #0d0f0e;
+
+$card-cap-bg: rgba($gray-900, .04) !default;
+
+
+@import 'bootstrap/scss/bootstrap';

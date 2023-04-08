@@ -1,0 +1,59 @@
+<div class="dashboard">
+<div class="container">
+  <div class="card mb-4 border-0 shadow" *ngFor="let node of nodes | async">
+    <div class="card-header border-0">
+      {{ node.displayName }}
+    </div>
+    <div
+      *ngFor="
+        let controlUnit of node.controlUnits;
+        let lastCard = last;
+        let i = index
+      "
+    >
+      <div class="card-body">
+        <h5 class="card-title">{{ controlUnit.displayName }}</h5>
+        <div class="row">
+          <div class="col">
+            <div class="form-check form-switch">
+              <label class="form-check-label" for="flex-switch-{{ i }}"
+                >{{controlUnit.controlState == 1 ? 'Turn off' : 'Turn on'}}</label
+              >
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="flex-switch-{{ i }}"
+                [checked]="controlUnit.controlState"
+                (click)="updateControlState(node, i)"
+              />
+            </div>
+          </div>
+          <div class="col">
+            Relay state:
+            <span
+              class="badge"
+              [ngClass]="
+                controlUnit.relayState == 0 ? 'bg-danger' : 'bg-success'
+              "
+              >{{ controlUnit.relayState == 0 ? "OFF" : "ON" }}</span
+            >
+          </div>
+          <div class="col justify-content-center">
+            <p><ngb-progressbar
+              type="info"
+              [value]="controlUnit.sensorValue * 10"
+              >{{ controlUnit.sensorValue }} Bar</ngb-progressbar
+            >
+            </p>
+          </div>
+        </div>
+      </div>
+      <hr *ngIf="!lastCard" class="m-0" />
+    </div>
+    <div class="card-footer border-0">
+
+      <small> Last update: {{ node.lastUpdate && node.lastUpdate.toDate() | date : "short" }} </small>
+    </div>
+  </div>
+</div>
+</div>
